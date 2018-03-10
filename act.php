@@ -2,22 +2,23 @@
 // reciving the from another web page
 // save the get value to a new variable to check it
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "latlng";
+$username = "ismaelmiber";
+$password = "932170";
+$dbname = "ismael";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
-$recive_get_method = $_GET["act"];
+$lat = $_GET["lat"];
+$lng = $_GET["lng"];
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
 $sql = "INSERT INTO numbers (lat, lng)
-    VALUES (2, 3)";
+    VALUES ($lat, $lng)";
 if ($conn->query($sql) === TRUE) {
 echo "New record created successfully";
 } else {
