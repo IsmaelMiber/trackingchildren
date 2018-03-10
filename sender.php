@@ -1,12 +1,16 @@
 
-
-
-
  <html>
   <body>
       <form action="act.php" method="get">
-      <input type="text" name="act"><br>
-      <input type="submit" value="Submit">
+      <label> LAT </label>
+      <br>
+      <input type="text" name="lat">
+      <br>
+      <label> LNG </label>
+      <br>
+      <input type="text" name="lng">
+      <br><br>
+      <button type="submit">Save</button>
 
    </form>
       
